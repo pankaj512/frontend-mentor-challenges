@@ -1,0 +1,11 @@
+{
+  "name": "product-preview-card-component-main",
+  "version": "1.0.0",
+  "description": "Product reveiw card",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build"
+  },
+  "author": "",
+  "license": "ISC"
+}
