@@ -8,13 +8,16 @@ body {
   font-size: 16px;
   font-family: "Montserrat", "Fraunces", "Helvetica Neue";
   width: 1440px;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
   background-color: hsl(30, 38%, 92%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .attribution {
@@ -31,8 +34,8 @@ body {
   display: flex;
   overflow: hidden;
   border-radius: 20px;
-  /* width: 60%;
-  height: 60%; */
+  width: 600px;
+  height: 450px;
 }
 
 .flex-item {
@@ -47,16 +50,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: 40px 30px;
+  padding: 20px 30px;
   background-color: hsl(0, 0%, 100%);
 }
 
 .product-info .info-item {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .product-info .title {
-  font-size: 3em;
+  font-size: 1em;
   color: hsl(158, 36%, 37%);
   font-family: Montserrat-mono-space;
   text-transform: uppercase;
@@ -64,14 +67,14 @@ body {
 }
 
 .product-info .heading {
-  font-size: 6em;
+  font-size: 1.8em;
   font-weight: bold;
   line-height: 1.2;
   font-family: "Fraunces";
 }
 
 .product-info .description {
-  font-size: 2.5em;
+  font-size: 0.9em;
   line-height: 1.5;
   color: hsl(158, 36%, 37%);
 }
@@ -89,39 +92,45 @@ body {
 }
 
 .product-info .price .current-price {
-  font-size: 5em;
+  font-size: 1.8em;
 }
 
 .product-info .price .last-price {
-  font-size: 1.5em;
+  font-size: 0.8em;
 }
 
 .product-info .button {
   display: flex;
   background-color: hsl(158, 36%, 37%);
   align-self: center;
-  height: 80px;
-  width: 80%;
+  height: 50px;
+  width: 100%;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   color: hsl(0, 0%, 100%);
-  font-size: 1.5em;
+  font-size: 0.9em;
 }
 
 .product-info .button .button-item {
   margin-right: 10px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 757px) {
   body {
     width: 375px;
-    height: fit-content;
-    margin: 30px auto;
+    min-height: 100vh;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height: fill-available;
+    margin: 20px auto;
   }
 
   .flex-container {
-    display: block;
+    flex-direction: column;
+    width: 300px;
+    height: 900px;
+    border-radius: 10px;
   }
 
   .flex-container .product-image-desktop {
