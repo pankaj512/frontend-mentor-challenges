@@ -116,7 +116,7 @@ body {
   margin-right: 10px;
 }
 
-@media (max-width: 757px) {
+@media screen and (max-width: 757px) {
   body {
     width: 375px;
     min-height: 100vh;
