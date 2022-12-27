@@ -44,19 +44,38 @@ body {
 
 .card .nft-images {
   position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
 }
 
 .card .nft-image {
-  border-radius: 10px;
-  width: 100%;
-  transition: 0.5s ease;
-  background: none;
+  max-width: 100%;
+}
+
+.card .nft-images:hover {
+  cursor: pointer;
+}
+
+.card .nft-image-hover {
+  position: absolute;
+  inset: 0;
+}
+
+.card .nft-image-hover:hover,
+.nft-image-hover:focus {
+  background: no-repeat center url(../images/icon-view.svg),
+    hsl(178, 100%, 50%, 0.5);
 }
 
 .card .nft-name {
   color: hsl(0, 0%, 100%);
   font-size: 1.7rem;
   font-weight: bold;
+}
+.card .nft-name:hover {
+  color: hsl(215, 51%, 70%);
+  cursor: pointer;
 }
 
 .card .nft-description {
@@ -94,31 +113,6 @@ body {
 .card .nft-creator span:hover {
   color: hsl(215, 51%, 70%);
   cursor: pointer;
-}
-
-.card .nft-name:hover {
-  color: hsl(215, 51%, 70%);
-  cursor: pointer;
-}
-
-.card .nft-image:hover {
-  cursor: pointer;
-}
-
-.card .nft-image-hover {
-  transition: 0.5s ease;
-  opacity: 0;
-  top: 40%;
-  left: 40%;
-  position: absolute;
-}
-
-.card .nft-images:hover .nft-image-hover {
-  opacity: 1;
-}
-
-.card .nft-images:hover .nft-image {
-  background: hsl(178, 100%, 50%);
 }
 
 @media screen and (min-width: 768px) {
