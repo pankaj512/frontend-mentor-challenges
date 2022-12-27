@@ -9,12 +9,11 @@ body {
   width: 375px;
   height: 100vh;
   background: hsl(217, 54%, 11%);
+  margin: auto;
+  color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin: 2rem auto;
-  color: hsl(0, 0%, 100%);
 }
 
 .attribution {
@@ -30,17 +29,17 @@ body {
   background: hsl(216, 50%, 16%);
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 20px;
   margin: auto;
-  max-width: 360px;
-  max-height: 600px;
-  border-radius: 1rem;
+  max-width: 350px;
+
+  border-radius: 10px;
   color: hsl(215, 51%, 70%);
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
 }
 
 .card .card-item {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .card .nft-images {
@@ -120,4 +119,10 @@ body {
 
 .card .nft-images:hover .nft-image {
   background: hsl(178, 100%, 50%);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 1440px;
+  }
 }
