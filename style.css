@@ -1,0 +1,134 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* reset taken care by reset.css */
+
+/* create color font variables */
+:root {
+  --primary-color-pale-blue: hsl(225, 100%, 94%);
+  --primary-color-bright-blue: hsl(245, 75%, 52%);
+  --neutral-color-very-pale-blue: hsl(225, 100%, 98%);
+  --neutral-color-desaturated-blue: hsl(224, 23%, 55%);
+  --neutral-color-dark-blue: hsl(223, 47%, 23%);
+
+  --font-family: "Red Hat Display", "sans-serif";
+  --font-weight-light: 500;
+  --font-weight-regular: 700;
+  --font-weight-bold: 900;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-family);
+  background-color: var(--primary-color-pale-blue);
+  color: var(--neutral-color-desaturated-blue);
+  --para-font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* make main as container */
+main {
+  width: 1440px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  max-width: 340px;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.card__order-image,
+.card__order-heading,
+.card__order-details,
+.card__order-desc,
+.card__order-information,
+button {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.card > *:not(:first-child) {
+  padding: 0 1.5rem;
+}
+
+.card__order-information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--neutral-color-very-pale-blue);
+  padding: 1rem;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.order-plan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.order-plan::before {
+  content: url("./images/icon-music.svg");
+  margin-right: 1rem;
+}
+
+.card__order-submit {
+  color: white;
+  padding: 0.7rem 0;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--primary-color-bright-blue);
+}
+
+.card__order-cancel {
+  border: none;
+  background-color: white;
+  font-weight: var(--font-weight-regular);
+  color: var(--neutral-color-desaturated-blue);
+}
+
+.card__order-heading {
+  font-weight: var(--font-weight-regular);
+  font-size: 1.3rem;
+  color: black;
+}
+
+.plan-type {
+  color: black;
+  font-weight: var(--font-weight-regular);
+}
+
+.plan-change,
+.card__order-submit,
+.card__order-cancel {
+  cursor: pointer;
+  transition: 50ms ease-in-out;
+}
+
+@media screen and (max-width: 757px) {
+  main {
+    width: 375px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media();
