@@ -1,0 +1,150 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: auto;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --font-family-lexend: "Lexend Deca", sans-serif;
+  --font-family-bsd: "Big Shoulders Display", sans-serif;
+
+  --primary-color-bright-orange: hsl(31, 77%, 52%);
+  --primary-color-dark-cyan: hsl(184, 100%, 22%);
+  --primary-color-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --neutral-color-white-transparent-para: hsla(0, 0%, 100%, 0.75);
+  --neutral-color-grey-bg: hsl(0, 0%, 95%);
+  --neutral-color-grey-heading: hsl(0, 0%, 95%);
+  --neutral-color-grey-button: hsl(0, 0%, 95%);
+
+  --font-size: 15px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --width-content-desktop: 1440px;
+  --width-content-mobile: 375px;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
+  font-size: var(--font-size);
+  font-family: var(--font-family-lexend);
+  font-weight: var(--font-weight-regular);
+  background-color: var(--neutral-color-grey-bg);
+  margin: 2rem auto;
+}
+
+main {
+  width: var(--width-content-desktop);
+  height: 90%;
+  margin: auto;
+}
+
+.grid-products {
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item {
+  padding: 2rem;
+}
+
+.grid-item > * {
+  margin-bottom: 1.5rem;
+}
+
+.product-image,
+.product-image img {
+  overflow: visible;
+}
+
+.product-title {
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-color-grey-heading);
+  font-family: var(--font-family-bsd);
+}
+
+.product-summary {
+  color: var(--neutral-color-white-transparent-para);
+  margin-bottom: 3rem;
+}
+
+.product-learn-more {
+  height: 3rem;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: var(--neutral-color-grey-button);
+}
+
+.product-learn-more:hover {
+  cursor: pointer;
+}
+
+.grid__product-sedan {
+  background: var(--primary-color-bright-orange);
+}
+
+.grid__product-sedan a {
+  color: var(--primary-color-bright-orange);
+  text-decoration: none;
+}
+
+.grid__product-sedan a:hover {
+  background-color: var(--primary-color-bright-orange);
+  color: var(--neutral-color-grey-button);
+  border: 1px solid var(--neutral-color-grey-button);
+}
+
+.grid__product-suvs {
+  background: var(--primary-color-dark-cyan);
+}
+
+.grid__product-suvs a {
+  color: var(--primary-color-dark-cyan);
+  text-decoration: none;
+}
+
+.grid__product-suvs a:hover {
+  background: var(--primary-color-dark-cyan);
+  color: var(--neutral-color-grey-button);
+  border: 1px solid var(--neutral-color-grey-button);
+}
+
+.grid__product-luxury {
+  background: var(--primary-color-very-dark-cyan);
+}
+
+.grid__product-luxury a {
+  color: var(--primary-color-very-dark-cyan);
+  text-decoration: none;
+}
+
+.grid__product-luxury a:hover {
+  background: var(--primary-color-very-dark-cyan);
+  color: var(--neutral-color-grey-button);
+  border: 1px solid var(--neutral-color-grey-button);
+}
+
+@media screen and (max-width: 757px) {
+  main {
+    width: var(--width-content-mobile);
+    margin: auto;
+    height: auto;
+  }
+  .grid-products {
+    display: block;
+    width: 250px;
+    margin: auto;
+  }
+}
