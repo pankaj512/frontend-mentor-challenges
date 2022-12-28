@@ -6,6 +6,10 @@
   color: hsl(228, 45%, 44%);
 }
 
+.sr-only {
+  display: none;
+}
+
 :root {
   --width-desktop: 1440px;
   --width-mobile: 375px;
