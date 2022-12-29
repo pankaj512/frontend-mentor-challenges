@@ -1,0 +1,119 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --width-desktop: 1440px;
+  --width-mobile: 375px;
+
+  --primary-color-dark-cyan: hsl(185, 75%, 39%);
+  --primary-color-dark-desa-blue: hsl(229, 23%, 23%);
+  --primary-color-grayish-blue: hsl(227, 10%, 46%);
+
+  --neutral-color-dary-gray: hsl(0, 0%, 59%);
+
+  --font-size: 1.2rem;
+
+  --font-family-kumbh: "Kumb Sans", Sans-serif;
+  --font-weight-light: 400;
+  --font-weight-bold: 700;
+}
+
+body {
+  min-height: 100vh;
+  font-size: var(--font-size);
+  font-family: var(--font-family-kumbh);
+  background-color: black;
+}
+
+main {
+  margin: 0 auto;
+  width: var(--width-mobile);
+  height: 100%;
+  background-color: var(--primary-color-dark-cyan);
+  display: grid;
+  grid-template-columns: 1fr;
+  color: var(--primary-color-dark-desa-blue);
+}
+
+.profile-card {
+  width: 300px;
+  height: 350px;
+  margin: auto;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.profile-upper-section {
+  content: url("./images/bg-pattern-card.svg");
+  width: 100%;
+  height: 30%;
+}
+
+.profile-middle-section {
+  position: relative;
+  grid-auto-rows: auto;
+  height: 40%;
+  border-bottom: 1px solid hsla(0, 0%, 59%, 0.3);
+}
+
+.profile-middle-section img {
+  border-radius: 50%;
+  border: 5px solid white !important;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.profile-middle-section .personal-info {
+  position: absolute;
+  left: 0%;
+  top: 40%;
+  width: 100%;
+}
+
+.name-and-age,
+.person-city {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.person-age {
+  font-weight: var(--font-weight-light);
+  margin-left: 10px;
+}
+
+.person-city,
+.person-age {
+  color: var(--primary-color-grayish-blue);
+}
+
+.name-and-age > h2 {
+  display: inline;
+  text-align: center;
+}
+
+.profile-lower-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  align-items: center;
+  height: 30%;
+}
+
+.stats {
+  font-weight: var(--font-weight-bold);
+  font-weight: 3rem;
+}
+
+.stat-name {
+  font-weight: var(--font-weight-light);
+  font-size: 0.8rem;
+  color: var(--primary-color-grayish-blue);
+}
