@@ -41,8 +41,8 @@ main {
 }
 
 .profile-card {
-  width: 300px;
-  height: 350px;
+  width: 20rem;
+  height: 25rem;
   margin: auto;
   background-color: white;
   border-radius: 15px;
@@ -64,10 +64,12 @@ main {
 
 .profile-middle-section img {
   border-radius: 50%;
-  border: 5px solid white !important;
+  border: 0.4rem solid white !important;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
+  width: 8rem;
+  height: 8rem;
 }
 
 .profile-middle-section .personal-info {
@@ -86,7 +88,7 @@ main {
 
 .person-age {
   font-weight: var(--font-weight-light);
-  margin-left: 10px;
+  margin-left: 0.5rem;
 }
 
 .person-city,
