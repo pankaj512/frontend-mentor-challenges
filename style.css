@@ -117,3 +117,9 @@ main {
   font-size: 0.8rem;
   color: var(--primary-color-grayish-blue);
 }
+
+@media screen and (min-width: 768px) {
+  main {
+    width: var(--width-desktop);
+  }
+}
