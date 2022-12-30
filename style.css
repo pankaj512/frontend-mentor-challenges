@@ -1,0 +1,150 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: auto;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.sr-only {
+  display: none;
+}
+
+:root {
+  --width-desktop: 1440px;
+  --width-mobile: 375px;
+
+  --primary-color-cyan: hsl(179, 62%, 43%);
+  --primary-color-yellow: hsl(71, 73%, 54%);
+
+  --neutral-color-light-gray: hsl(204, 43%, 93%);
+  --neutral-color-grayish-blue: hsl(218, 22%, 67%);
+
+  --font-size: 1rem;
+  --font-family: "Karla", Sans-serif;
+  --font-weight-light: 400;
+  --font-weight-bold: 700;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  min-height: 100vh !important;
+  height: auto;
+  margin: auto;
+}
+
+.container {
+  max-width: var(--width-mobile);
+  min-height: 100vh;
+  height: 100%;
+  margin: auto;
+  display: flex; /* just to align card in center */
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--neutral-color-light-gray);
+}
+
+.card {
+  max-width: 330px;
+  background-color: white;
+  margin: 2rem auto;
+  border-radius: 0.3rem;
+  box-shadow: 0.1rem 0.1rem 0.1 black, -0.1rem -0.1rem 0.1 black;
+}
+
+.item {
+  padding: 1.5rem;
+}
+
+.item > h3 {
+  margin-bottom: 1rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.community-info {
+  color: var(--neutral-color-grayish-blue);
+  font-weight: var(--font-weight-bold);
+}
+
+.community-info :nth-child(2) {
+  color: var(--primary-color-yellow);
+  margin-bottom: 1rem;
+}
+
+.community-info :nth-child(3) {
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-light);
+  line-height: 1.8;
+}
+
+.subscription-info {
+  background-color: var(--primary-color-cyan);
+  color: var(--neutral-color-light-gray);
+  color: white;
+}
+
+.subscription-info .price-info {
+  display: flex;
+  align-items: center;
+}
+
+.subscription-info .price-info :nth-child(1) {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  margin-right: 1rem;
+}
+
+.price-info :nth-child(2) {
+  opacity: 0.7;
+}
+
+.btn-sign-up {
+  width: 100%;
+  padding: 0.7rem 0;
+  margin-top: 1.2rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: var(--primary-color-yellow);
+  font-weight: var(--font-weight-bold);
+  color: white;
+  box-shadow: 0.1rem 0.1rem 0.1 black, -0.1rem -0.1rem 0.1 black;
+}
+
+.reason-for-subscription {
+  background-color: var(--neutral-color-grayish-blue);
+  color: var(--neutral-color-light-gray);
+  opacity: 0.9;
+}
+
+.reason-for-subscription > p {
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-light);
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: var(--width-desktop);
+    display: flex; /* just to align card in center */
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .card {
+    max-width: 600px;
+    background-color: white;
+    margin: 2rem auto;
+    border-radius: 0.3rem;
+    box-shadow: 0.1rem 0.1rem 0.1 black, -0.1rem -0.1rem 0.1 black;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .community-info {
+    grid-column: 1 / 3;
+  }
+}
