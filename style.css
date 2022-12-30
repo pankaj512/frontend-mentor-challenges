@@ -34,10 +34,15 @@ main {
   margin: 0 auto;
   width: var(--width-mobile);
   height: 100%;
-  background-color: var(--primary-color-dark-cyan);
   display: grid;
   grid-template-columns: 1fr;
   color: var(--primary-color-dark-desa-blue);
+
+  background: url("images/bg-pattern-top.svg"),
+    url("images/bg-pattern-bottom.svg");
+  background-color: var(--primary-color-dark-cyan);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
 }
 
 .profile-card {
