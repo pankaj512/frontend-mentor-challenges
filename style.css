@@ -57,6 +57,11 @@ article {
   grid-template-rows: repeat(2, 20rem);
   row-gap: 2rem;
   grid-auto-columns: minmax(auto, 80rem);
+
+  background-image: url("./images/bg-pattern-top-desktop.svg"),
+    url("./images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom 10vh right;
 }
 
 .upper-section {
