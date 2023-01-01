@@ -1,0 +1,151 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: black;
+}
+
+:root {
+  --width-mobile: 375px;
+  --width-desktop: 1440px;
+
+  --primary-color-violet: hsl(257, 40%, 49%);
+  --primary-color-soft-magenta: hsl(300, 69%, 71%);
+
+  --font-family-poppins: "poppins", "helvetica neue", sans-serif;
+  --font-family-open-sans: "open sans", "helvetica neue", sans-serif;
+
+  --font-size: 1rem;
+}
+
+body {
+  height: auto;
+  min-height: 100vh;
+  background-image: url(./images/bg-desktop.svg);
+  background-color: var(--primary-color-violet);
+  color: #fff;
+  font-family: var(--font-family-poppins);
+}
+
+header {
+  padding: 2rem 0;
+}
+.container {
+  max-width: var(--width-mobile);
+  margin: 0rem auto;
+}
+
+header .container {
+  height: 2rem;
+}
+
+header .container img {
+  height: 100%;
+}
+
+main .container {
+  text-align: center;
+}
+
+.illustration-image {
+  margin-bottom: 3rem;
+}
+
+.huddle-description > * {
+  margin-bottom: 1rem;
+}
+
+.huddle-description > h1 {
+  line-height: 1.3;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.huddle-description > p {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.register {
+  color: var(--primary-color-violet);
+  width: 15rem;
+  padding: 0.6rem 0;
+  border-radius: 1.5rem;
+  border: none;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+}
+
+.register:hover {
+  cursor: pointer;
+  background-color: var(--primary-color-soft-magenta);
+  transition: 0.5ms ease-in;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .socials > * {
+  padding: 0.5rem;
+}
+
+footer .socials i {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #fff;
+  margin-right: 0.8rem;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+}
+
+footer .socials i:hover {
+  cursor: pointer;
+  background-color: var(--primary-color-soft-magenta);
+  transition: 0.5ms ease-in;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: var(--width-desktop);
+    margin: 0rem auto;
+    padding: 2rem auto;
+  }
+
+  header .container {
+    height: 3rem;
+  }
+
+  header .container img {
+    height: 100%;
+  }
+
+  main .container {
+    display: grid;
+    text-align: start;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .huddle-description {
+    padding: 2rem;
+  }
+
+  .huddle-description > h1 {
+    line-height: 1.3;
+    font-weight: 600;
+    font-size: 3rem;
+  }
+
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+}
