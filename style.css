@@ -1,0 +1,140 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --width-Mobile: 375px;
+  --width-Desktop: 1440px;
+  --primary-Moderate-violet: hsl(263, 55%, 52%);
+  --primary-Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --primary-Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --primary-White: hsl(0, 0%, 100%);
+  --neutral-Light-gray: hsl(0, 0%, 81%);
+  --neutral-Light-grayish-blue: hsl(210, 46%, 95%);
+  --Font-size: 0.9rem;
+  --Font-weight-regular: 500;
+  --Font-Weight-bold: 600;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  font-size: var(--Font-size);
+  font-weight: var(--Font-weight-regular);
+  font-family: "Barlow Semi Condensed", "Helvetica Neue", sans-serif;
+  background-color: var(--neutral-Light-grayish-blue);
+}
+
+.container {
+  display: grid;
+  max-width: var(--width-Mobile);
+  gap: 1rem;
+  margin: 10px auto;
+}
+
+article {
+  border-radius: 7px;
+  padding: 1rem;
+  width: 350px;
+  color: white;
+  line-height: 1.2;
+  border: 1px solid #eee;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 10px;
+}
+
+article > * {
+  margin-bottom: 1rem;
+}
+
+.image-name-title {
+  display: flex;
+  align-items: center;
+}
+
+article img {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.hero-text {
+  font-size: 1.4rem;
+  font-weight: var(--Font-Weight-bold);
+}
+
+.verify {
+  opacity: 50%;
+}
+
+.summary-text {
+  opacity: 60%;
+}
+
+#Daniel {
+  background-color: var(--primary-Moderate-violet);
+}
+
+#Jonathan {
+  background-color: var(--primary-Very-dark-grayish-blue);
+}
+
+#Jeanette {
+  background-color: var(--primary-White);
+  color: var(--primary-Very-dark-grayish-blue);
+}
+
+#Patrick {
+  background-color: var(--primary-Very-dark-blackish-blue);
+}
+
+#Kira {
+  background-color: var(--primary-White);
+  color: var(--primary-Very-dark-grayish-blue);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: var(--width-Desktop);
+  }
+
+  article {
+    width: auto;
+  }
+
+  #Daniel {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  #Jonathan {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
+
+  #Jeanette {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  #Patrick {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+
+  #Kira {
+    grid-column: 4;
+    grid-row: 1 / 3;
+  }
+}
